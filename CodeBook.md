@@ -1,16 +1,16 @@
-#Code Book
+# Code Book
 ## Getting and Cleaning Data Project
 
 This code book describes the variables, data, and transformations or work that were performed to clean up the original data.
 
-#Data
+## Data
 The original data was sourced from the Human Activity Recognition Using Smartphones Data Set [1]. The experiments recorded activities by a group of 30 volunteers. The activities noted by the experiments were WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 Recording was made through a smartphone (Samsung Galaxy S II) on the waist using the embedded accelerometer and gyroscope of the device. 
 The obtained dataset which was downloaded was partitioned into two sets, training and test data, randomly divided to 70% and 30% respectively.
 
-#Variables
+## Variables
 
-#Identifiers
+## Identifiers
 subject - The ID of a particular subject. Data type: integer. Range: 1 to 30.
 activity - The type of activity performed by a subject derived from the measurements taken by the smartphone sensors. Range of values: 1 - 6 and labeled correspondingly -
 1. WALKING: subject was walking
@@ -20,7 +20,7 @@ activity - The type of activity performed by a subject derived from the measurem
 1. STANDING: subject was standing
 1. LAYING: subject was laying
 
-#Measurements
+## Measurements
 These are the measurements considered in the tiny_data.txt:
 [1] "TimeBodyAccelerometerMean.X"                             
 [2] "TimeBodyAccelerometerMean.Y"                             
@@ -102,7 +102,7 @@ These are the measurements considered in the tiny_data.txt:
 [78] "FrequencyBodyGyroscopeJerkMagnitudeStandardDeviation"    
 [79] "FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency"  
 
-#Transformations
+## Transformations
 The source data of the Human Activity Recognition Using Smartphones Data Set was downloaded at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
 The following transformations to the source data were applied using run_Analysis.R:
@@ -128,7 +128,7 @@ activityMeans <- finalData %>%
   summarise_all(funs(mean))
 
 
-##Citation:
+## Citation:
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for
 Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks,
 Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.
